@@ -1,0 +1,19 @@
+{
+  "name": "workwithus",
+  "version": "0.0.1",
+  "description": "Initial home",
+  "main": "app/scripts/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BTBurke/workwithus.git"
+  },
+  "author": "Bryan Burke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BTBurke/workwithus/issues"
+  },
+  "homepage": "https://github.com/BTBurke/workwithus#readme"
+}
