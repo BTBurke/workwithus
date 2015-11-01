@@ -1,0 +1,10 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+.container {
+  @include outer-container;
+}
+.test {
+  @include span-columns(9);
+  background: green;
+}
