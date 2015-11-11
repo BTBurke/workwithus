@@ -1,1 +1,1 @@
-import * as styles from 'styles/main.scss';
+import './styles/main.scss';

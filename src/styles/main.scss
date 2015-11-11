@@ -1,5 +1,16 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@include font-face("cloudworld", "font/cloudworld", $file-formats: ttf);
+@include font-face("raleway-bold", "font/Raleway-Bold", $file-formats: ttf);
+@include font-face("raleway", "font/Raleway-Regular", $file-formats: ttf);
+
+$brand-dark-blue: #354052;
+$brand-pink: #e91a61;
+
+html, body {
+  overflow-x: hidden;
+  margin: 0px;
+}
 
 .container {
   @include outer-container;
@@ -7,4 +18,41 @@
 .test {
   @include span-columns(9);
   background: green;
+}
+
+.header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 70px;
+  background: $brand-dark-blue;
+
+  .logo {
+    font-family:: "cloudworld";
+    font-size: 40px;
+    color: #fff;
+    flex: 1;
+    order: 1;
+    text-align: center;
+    .us {
+      color: $brand-pink;
+    }
+  }
+}
+
+.headtagline {
+  .promise {
+    font-family: "raleway-bold";
+    font-size: 32px;
+    padding-bottom: 10px;
+  }
+  .promise-explain {
+    font-family: "raleway";
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
 }
