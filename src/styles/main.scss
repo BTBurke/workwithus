@@ -15,10 +15,6 @@ html, body {
 .container {
   @include outer-container;
 }
-.test {
-  @include span-columns(9);
-  background: green;
-}
 
 .header {
   width: 100%;
@@ -29,7 +25,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 70px;
-  background: $brand-dark-blue;
+  background: shade(#1a61e9, 20%);
 
   .logo {
     font-family:: "cloudworld";
@@ -44,15 +40,101 @@ html, body {
   }
 }
 
+.section-1 {
+  @include background-image(linear-gradient(#1a61e9, darken(#1a61e9, 5%)));
+
 .headtagline {
-  .promise {
-    font-family: "raleway-bold";
-    font-size: 32px;
-    padding-bottom: 10px;
+  @include outer-container;
+  padding-top: 40px;
+
+  .copy {
+    @include span-columns(5);
+    padding-bottom: 40px;
+    .promise {
+      font-family: "raleway-bold";
+      font-size: 32px;
+      padding-bottom: 30px;
+      color: #fff;
+    }
+    .promise-explain {
+      font-family: "raleway";
+      font-size: 20px;
+      color: shade(#fff, 5%);
+      .bold {
+        font-family: "raleway-bold";
+      }
+    }
   }
-  .promise-explain {
-    font-family: "raleway";
-    font-size: 20px;
-    padding-bottom: 20px;
+  .screenshot {
+    @include span-columns(7);
+    max-height: 400px;
+    padding-left: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
+}
+
+.section-2 {
+  background: #eee;
+  .feature-list {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #eee;
+    @include outer-container;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .feature-1 {
+      padding-right: 10px;
+      background: #eee;
+      .feature-header {
+        font-family: "raleway-bold";
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+      .feature-icon {
+        width: 50%;
+        margin: auto;
+        padding-bottom: 10px;
+      }
+      font-family: "raleway";
+      font-size: 16px;
+      flex: 1;
+      order: 1;
+      text-align: center;
+    }
+    .feature-2 {
+      background: #eee;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: "raleway";
+      font-size: 16px;
+      flex: 1;
+      order: 2;
+      text-align: center;
+      .feature-header {
+        font-family: "raleway-bold";
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+    }
+    .feature-3 {
+        padding-left: 10px;
+        background: #eee;
+        .feature-header {
+          font-family: "raleway-bold";
+          font-size: 20px;
+          padding-bottom: 10px;
+        }
+        font-family: "raleway";
+        font-size: 16px;
+        flex: 1;
+        order: 3;
+        text-align: center;
+      }
   }
 }
