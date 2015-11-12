@@ -3,7 +3,6 @@
 @include font-face("cloudworld", "font/cloudworld", $file-formats: ttf);
 @include font-face("raleway-bold", "font/Raleway-Bold", $file-formats: ttf);
 @include font-face("raleway", "font/Raleway-Regular", $file-formats: ttf);
-@include font-face("FontAwesome", "font/fontawesome-webfont", $file-formats: ttf);
 
 $brand-dark-blue: #354052;
 $brand-pink: #e91a61;
@@ -87,7 +86,7 @@ html, body {
     @include outer-container;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
 
     .feature-1 {
       padding-right: 10px;
@@ -117,6 +116,11 @@ html, body {
       flex: 1;
       order: 2;
       text-align: center;
+      .feature-icon {
+        width: 50%;
+        margin: auto;
+        padding-bottom: 10px;
+      }
       .feature-header {
         font-family: "raleway-bold";
         font-size: 20px;
@@ -126,6 +130,11 @@ html, body {
     .feature-3 {
         padding-left: 10px;
         background: #eee;
+        .feature-icon {
+          width: 50%;
+          margin: auto;
+          padding-bottom: 10px;
+        }
         .feature-header {
           font-family: "raleway-bold";
           font-size: 20px;
