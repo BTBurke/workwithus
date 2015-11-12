@@ -3,6 +3,7 @@
 @include font-face("cloudworld", "font/cloudworld", $file-formats: ttf);
 @include font-face("raleway-bold", "font/Raleway-Bold", $file-formats: ttf);
 @include font-face("raleway", "font/Raleway-Regular", $file-formats: ttf);
+@include font-face("FontAwesome", "font/fontawesome-webfont", $file-formats: ttf);
 
 $brand-dark-blue: #354052;
 $brand-pink: #e91a61;

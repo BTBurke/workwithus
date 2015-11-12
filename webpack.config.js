@@ -17,5 +17,7 @@ module.exports = getConfig({
   // but since it's destructive we make it
   // false by default
   clearBeforeBuild: '!(assets|index.html)',
-  html: false
+  html: false, 
+  port: 8080,
+  hostname: "0.0.0.0"
 })
