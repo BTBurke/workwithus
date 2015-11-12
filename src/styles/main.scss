@@ -80,8 +80,8 @@ html, body {
 .section-2 {
   background: #eee;
   .feature-list {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background: #eee;
     @include outer-container;
     display: flex;
@@ -94,12 +94,12 @@ html, body {
       .feature-header {
         font-family: "raleway-bold";
         font-size: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
       }
       .feature-icon {
         width: 50%;
         margin: auto;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
       }
       font-family: "raleway";
       font-size: 16px;
@@ -119,12 +119,12 @@ html, body {
       .feature-icon {
         width: 50%;
         margin: auto;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
       }
       .feature-header {
         font-family: "raleway-bold";
         font-size: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
       }
     }
     .feature-3 {
@@ -133,12 +133,12 @@ html, body {
         .feature-icon {
           width: 50%;
           margin: auto;
-          padding-bottom: 10px;
+          padding-bottom: 15px;
         }
         .feature-header {
           font-family: "raleway-bold";
           font-size: 20px;
-          padding-bottom: 10px;
+          padding-bottom: 15px;
         }
         font-family: "raleway";
         font-size: 16px;
@@ -146,5 +146,76 @@ html, body {
         order: 3;
         text-align: center;
       }
+  }
+}
+
+.section-3 {
+  $thisColor: shade(#fff, 5%);
+  background: #fff;
+  .biz-leadin {
+    @include outer-container;
+    font-family: "raleway-bold";
+    color: #333;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .biz-type {
+    @include outer-container;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+
+    .biz-technical {
+      .biz-tech-header {
+          font-family: "raleway-bold";
+          font-size: 24px;
+          color: #333;
+          text-align: center;
+          .biz-icon {
+            width: 60px;
+            padding-right: 10px;
+          }
+      }
+      background: $thisColor;
+      flex: 1;
+      order: 1;
+      text-align: left;
+      font-size: 18px;
+      font-family: "raleway";
+      justify-content: space-between;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 15px;
+    }
+
+    .biz-agricultural {
+      .biz-ag-header {
+          font-family: "raleway-bold";
+          font-size: 24px;
+          color: #333;
+          text-align: center;
+          .ag-icon {
+            width: 60px;
+            padding-right: 10px;
+          }
+      }
+      background: $thisColor;
+      flex: 1;
+      order: 2;
+      text-align: left;
+      font-size: 18px;
+      font-family: "raleway";
+      justify-content: space-between;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 15px;
+    }
   }
 }
