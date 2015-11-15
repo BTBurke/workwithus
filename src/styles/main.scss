@@ -6,6 +6,7 @@
 
 $brand-dark-blue: #354052;
 $brand-pink: #e91a61;
+$match-blue: #004D83;
 
 html, body {
   overflow-x: hidden;
@@ -25,7 +26,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 70px;
-  background: shade(#1a61e9, 20%);
+  background: $match-blue;
 
   .logo {
     font-family:: "cloudworld";
@@ -41,15 +42,21 @@ html, body {
 }
 
 .section-1 {
-  @include background-image(linear-gradient(#1a61e9, darken(#1a61e9, 5%)));
+  //@include background-image(linear-gradient(#1a61e9, darken(#1a61e9, 5%)));
+  @include background-image(url(../../dist/assets/1.jpg));
+  background-position: center top, center;
+  background-repeat: false;
+  background-size: cover;
 
 .headtagline {
   @include outer-container;
-  padding-top: 40px;
+  padding-top: 90px;
+
 
   .copy {
-    @include span-columns(5);
-    padding-bottom: 40px;
+    @include span-columns(6);
+    min-height: 500px;
+    margin: auto 0 auto 0;
     .promise {
       font-family: "raleway-bold";
       font-size: 32px;
@@ -150,8 +157,7 @@ html, body {
 }
 
 .section-3 {
-  $thisColor: shade(#fff, 5%);
-  background: #fff;
+  background: shade(#fff, 3%);
   .biz-leadin {
     @include outer-container;
     font-family: "raleway-bold";
@@ -164,58 +170,56 @@ html, body {
   }
   .biz-type {
     @include outer-container;
-    padding-top: 10px;
-    padding-bottom: 50px;
-
+    padding-top: 0px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: row;
     align-items: baseline;
 
+    .biz-technical, .biz-agricultural {
+      background: #fff;
+      border-radius: 3px 3px 0 0;
+      background: #fff;
+      flex: 1;
+      text-align: left;
+      font-size: 18px;
+      font-family: "raleway";
+      justify-content: space-between;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
     .biz-technical {
-      .biz-tech-header {
-          font-family: "raleway-bold";
-          font-size: 24px;
-          color: #333;
-          text-align: center;
-          .biz-icon {
-            width: 60px;
-            padding-right: 10px;
-          }
-      }
-      background: $thisColor;
-      flex: 1;
       order: 1;
-      text-align: left;
-      font-size: 18px;
-      font-family: "raleway";
-      justify-content: space-between;
-      margin-left: 10px;
-      margin-right: 10px;
-      padding: 15px;
+    }
+    .biz-agricultural {
+      order: 2;
     }
 
-    .biz-agricultural {
-      .biz-ag-header {
-          font-family: "raleway-bold";
-          font-size: 24px;
-          color: #333;
-          text-align: center;
-          .ag-icon {
-            width: 60px;
-            padding-right: 10px;
-          }
-      }
-      background: $thisColor;
-      flex: 1;
-      order: 2;
-      text-align: left;
-      font-size: 18px;
-      font-family: "raleway";
-      justify-content: space-between;
-      margin-left: 10px;
-      margin-right: 10px;
-      padding: 15px;
+    .biz-tech-header, .biz-ag-header {
+        font-family: "raleway-bold";
+        font-size: 24px;
+        color: #fff;
+        text-align: left;
+        background-color: rgba(51, 51, 51, 0.5);
+        position: relative;
+        padding: 20px 0 20px 0px;
+        text-align: center;
+        border-radius: 3px 3px 0 0;
     }
+    .biz-tech-photo, .biz-ag-photo {
+      min-height: 300px;
+      border-radius: 3px 3px 0 0;
+      background-size: cover;
+      background-position: center top, center;
+    }
+    .biz-tech-photo {
+      @include background-image(url(../../dist/assets/tech.jpg));
+    }
+    .biz-ag-photo {
+      @include background-image(url(../../dist/assets/ag.jpg));
+    }
+
+
   }
 }
